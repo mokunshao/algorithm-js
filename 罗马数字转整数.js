@@ -14,11 +14,13 @@ var romanToInt = function (s) {
   };
   const arr = s.split('');
   let num = 0;
-  for (let i in arr) {
-    if (obj[arr[i]] < obj[arr[1 + Number(i)]]) {
-      num = num - obj[arr[i]];
+  for (let i = 0; i < arr.length; i++) {
+    const cur = obj[arr[i]];
+    const next = obj[arr[i + 1]];
+    if (cur < next) {
+      num = num - cur;
     } else {
-      num = num + obj[arr[i]];
+      num = num + cur;
     }
   }
   return num;
