@@ -1,0 +1,1 @@
+先执行 `git config commit.template .gitmessage` 设置 commit 模版
